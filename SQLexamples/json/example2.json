@@ -1,0 +1,7 @@
+{
+    "header": "Example 2 - DateDiff",
+    "description": "Lets say that You have a table called Employees that has information about the Employees of a company, including the date the employee was hired(HireDate) and You want to find out all the employees hired in the last 'n' months.",
+    "result": "",
+    "link": "http://www.w3schools.com/sql/func_datediff_mysql.asp",
+    "query": "<p>SELECT *, DATEDIFF(MONTH, HireDate, GETDATE()) as Diff <br> FROM Employees <br> WHERE DATEDIFF(MONTH, HireDate, GETDATE()) between 0 and 3 <br> ORDER BY HireDate DESC;</p>"
+}

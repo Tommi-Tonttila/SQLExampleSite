@@ -1,0 +1,143 @@
+.navi
+{
+	height: 75px;
+	border-bottom: 1px solid black;
+	overflow: hidden;
+	padding-top:20px;
+}
+
+.welcome
+{
+	padding-top: 15px;
+}
+
+.welcomeText
+{
+	font-style: italic;
+	font-weight: bold;
+	text-align: justify;
+	margin: 0px;
+}
+
+h2
+{
+	margin: 0px;
+}
+
+.bborder
+{
+	border-bottom: 1px solid black;
+	height: 65px;
+	margin-bottom: 20px;
+}
+
+.tborder
+{
+	border-top: 1px solid black;
+	height: 65px;
+	margin-top: 10px;
+}
+
+.rightbox
+{
+	text-align: right;
+}
+
+.leftbox
+{
+	padding-top: 20px;
+}
+
+.inputText
+{
+	display:inline;
+	font-style: italic;
+	font-weight: bold;
+	text-align: justify;
+	margin: 0px;
+}
+
+.tabHolder
+{
+	height: 80px;
+	padding-top:30px;
+}
+
+.explanationHolder
+{
+	/*width: 47.5%;*/
+	height: 200px;
+	border: 1px solid gray;
+	padding-top:10px;
+}
+
+.implementationHolder
+{
+	/*width: 47.5%;*/
+	height: 200px;
+	border: 1px solid gray;
+	padding-top: 10px;
+	overflow: scroll;
+}
+
+.no-margin
+{
+	margin: 0px;
+}
+
+.font-right
+{
+	text-align:right;
+}
+
+.h1Link
+{
+	text-decoration:none;
+	color:black;
+	font-size: 40px;
+}
+.h1Link:hover
+{
+	text-decoration:none;
+	color:black;
+	font-size: 40px;
+}
+
+.textalignCenter
+{
+  text-align:center;
+  padding-top: 20px;
+}
+
+.displayInline
+{
+	display:inline;
+}
+
+.exampleHolder
+{
+	text-align:center;
+}
+
+.paddingLeft
+{
+	padding-left: 8% !important;
+}
+
+.fcolor
+{
+	color: #905fa5;
+}
+
+.tableFormat
+{
+	margin-top:10px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    text-align:center !important;
+}

@@ -1,0 +1,87 @@
+<!doctype html>
+<html ng-app="SQLExampleApp"> 
+	<head>
+		<link href="css/main.css" rel="stylesheet" />
+		<link href="http://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+
+		<!-- Angularjs -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
+   		<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular-route.min.js"></script>
+
+   		<!-- Firebase -->
+		<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+
+		<!-- AngularFire -->
+		<script src="https://cdn.firebase.com/libs/angularfire/1.1.1/angularfire.min.js"></script>
+
+
+	</head>
+	<body>
+		<div class="header">
+			<div class="container">
+				<div class="navi">
+					<a href="#" class="h1Link">SQL Examples</a>
+				</div>
+			</div>
+		</div>
+
+		 <div ng-view></div>
+
+		 <div class="second-main" ng-controller="MainController">
+		 	<div class="container">
+		 		<div class="links row">
+			 		<div class="col-md-12 bborder">
+			 			<h2>Links</h2>
+			 		</div>
+			 		<div class="col-md-3 paddingLeft" ng-repeat="info in siteInfos">
+			 		<site-info info="info"></site-info>
+			 		</div>
+		 		</div>
+
+		 		<div clss="comments">
+		 			<div class="col-md-12 bborder">
+		 				<h2 class="font-right">Comments</h2>
+		 			</div>
+		 			<button class="btn btn-default" ng-click="mainFunctions.loginauth()">Login with Google+</button>
+		 			<div class="panel panel-default" ng-repeat="comment in comments">
+		 				<div class="panel-body">
+		 				<a ng-href="https://plus.google.com/{{comment.userlink}}">{{comment.user}}</a>
+		 				</div>
+		 				<div class="panel-footer">{{comment.text}}
+		 				</div>
+		 			</div>
+	 				<form>
+	 					<div class="input-group">
+	 						<input = ng-model="comment.text" class="form-control" placeholder="Leave a comment here">
+	 						<div class="input-group-btn">
+	 							<button ng-click="mainFunctions.addComment(comment)" class="btn btn-success">Send</button>
+	 						</div>
+	 					</div>
+	 				</form>	
+		 		</div>
+		 	</div>
+		 </div>
+		<div class="footer">
+			<div class="container">
+				<div class="col-md-12 tborder">
+				<p class="textalignCenter">@copyright Tommi Tonttila</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modules -->
+		<script src="js/app.js"></script>
+
+		<!-- Controllers -->
+		<script src="js/controllers/HomeController.js"></script>
+		<script src="js/controllers/ExampleController.js"></script>
+		<script src="js/controllers/MainController.js"></script>
+
+		<!-- Directives -->
+		<script src="js/directives/siteInfo.js"></script>
+
+		<!-- Services -->
+    	<script src="js/services/examplesService.js"></script>
+
+	</body>
+</html>

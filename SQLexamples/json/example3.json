@@ -1,0 +1,7 @@
+{
+	"header": "Example 3 - Delete duplicate ID rows",
+    "description": "If You have table with duplicate ID rows and You want to delete all but one of the rows, this is a one way to do it.",
+    "result": "",
+    "link": "https://www.youtube.com/watch?v=ynWgSZBoUkU",
+    "query": "<p>With EmployeeCTE As <br>(<br>SELECT *, ROW_NUMBER() Over(Partition BY ID order By ID) as Rownumber <br>from Employees<br>)<br> Delete from EmployeeCTE where RowNumber > 1;</p>"
+}

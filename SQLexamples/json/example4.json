@@ -1,0 +1,7 @@
+{
+	"header": "Example 4 - Recursive CTE",
+    "description": "You have a table called Employees with EmployeeId, EmployeeName and ManagerID and You want to get the complete organization hierarchy based on an EmployeeId ( who is said Employees manager, who is that managers manager -> so on until we reach the boss of whole organization.",
+    "result": "",
+    "link": "http://stackoverflow.com/questions/14274942/sql-server-cte-and-recursion-example",
+    "query": "<p>Declear @ID int; <br> Set @ID = 7; <br><br> WITH EmployeeCTE as <br> ( <br> -- Anchor <br> Select EmployeeId, EmployeeName, ManagerID <br> From Employees <br> Where EmployeeId = @ID <br><br> UNION ALL <br><br> -- Recursive block <br> Select Employees.EmployeeId, Employees.EmployeeName, Employees.ManagerID <br> From Employees <br> JOIN EmployeeCTE <br> ON Employees.EmployeeId = EmployeeCTE.ManagerId <br><br>) <br><br> Select E1.EmployeeName, ISNULL(E2.EmployeeName, 'Has No Boss' as ManagerName <br> From EmployeeCTE E1 <br> Left Join EmployeeCTE E2 <br> ON E1.ManagerID = E2.EmployeeId</p>"
+}

@@ -1,0 +1,15 @@
+<div class="main">
+	<div class="container">
+		<div class="col-md-12 tabHolder">
+		<h2 class="displayInline">{{exampleinfo.header}}</h2>
+		<a class=" displayInline" href="{{exampleinfo.link}}" target="_blank">Click for more info</a>
+		</div>
+		<div class="col-md-6 explanationHolder">
+			<p class="no-margin">{{exampleinfo.description}}</p>
+			<div class="tableFormat" ng-bind-html="htmlresult">
+			</div>
+		</div>
+		<div class="col-md-6 implementationHolder" ng-bind-html="htmlquery">
+		</div>
+	</div>
+</div>

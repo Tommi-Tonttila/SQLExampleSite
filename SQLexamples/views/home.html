@@ -1,0 +1,41 @@
+<div class="main">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 welcome">
+				<p class="welcomeText">
+				Welcome to my SQL Examples website. You might be wondering what is the point of this site, truth to be told, there isn't one. This is just a site made by me to test out AngularJS (using modules/controllers/directives/services/views/routeProvider). Below You can find searchable list of different SQL query examples and explanations, links related to the project and comment section made with Firebase.
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 bborder leftbox">
+				<p class="inputText">Search </p><input ng-model="query" type="text"/>
+				<button class="btn btn-default" ng-click="reverse = !reverse">Reverse Sort Order</button>	
+			</div>
+			<div class="col-md-6 bborder rightbox">
+				<h2>Searchable Example List</h2>
+			</div>
+		</div>
+		<div class="row">
+		<div class="col-md-4 exampleHolder" ng-repeat="example in examples | filter:query | orderBy:sortField:reverse">
+		<p class="no-margin">{{example.name}}</p>
+		<a href="#/SQLexamples/{{example.number}}">{{example.title}}</a>
+		</div>
+	</div>
+</div>
+
+
+
+<!--
+
+<div class="row">
+			<div class="item col-md-4" ng-repeat="app in apps">
+				<a href="#/apps/{{$index}}">
+					<p>{{app.title}}</p>
+				</a>
+			</div>
+		</div>
+
+
+
+-->

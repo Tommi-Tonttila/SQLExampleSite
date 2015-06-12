@@ -1,0 +1,7 @@
+{
+	"header": "Example 5 - Nth result",
+    "description": "Lets say that You want to find out the 3rd highest salaray from table. There are many ways to get the Nth result depending on what you need. Here is something pretty neat tho, this way if multiple people has same salary you will get the nth different salary",
+    "result": "",
+    "link": "http://blog.jooq.org/2014/08/12/the-difference-between-row_number-rank-and-dense_rank/",
+    "query": "WITH RESULT AS <br> ( <br> Select Salary DENSE_RANK() over (Order by Salary DESC) as DENSRANK <br> from Employees <br> ) <br> Select Salary <br> From RESULT <br> Where RESULT.DENSRANK = 3</p>"
+}

@@ -1,0 +1,7 @@
+{
+    "header": "Example - 1, Group By",
+    "description": "Lets say that You have a table called tblEmployees that has columns for ID, Name, City, Gender and Salary. You want to find out how many male and female workers there are in each city and what is their total salary. Result should be something like: ",
+    "result": "<table style='width:100%'><tr><th>City</th><th>Gender</th><th>TotalSalary</th><th>TotalEmployees</th></tr><tr><td>New York</td><td>Male</td><td>27500</td><td>4</td></tr><tr><td>New York</td><td>Female</td><td>27500</td><td>3</td></tr><tr><td>London</td><td>Female</td><td>11500</td><td>2</td></tr></table>",
+    "link": "http://www.w3schools.com/sql/sql_groupby.asp",
+    "query": "<p><span class='fcolor'>SELECT</span> Gender, City, <span class='fcolor'>SUM</span>(Salary) <span class='fcolor'>AS</span> TotalSalary, <span class='fcolor'>COUNT</span>(ID) <span class='fcolor'>AS</span> TotalEmployees <br> <span class='fcolor'>FROM</span> tblEmployees <br> <span class='fcolor'>GROUP BY</span> Gender, City;</p>" 
+}
